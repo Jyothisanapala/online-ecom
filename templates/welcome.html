@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#example1 {
+  background-image:url('https://watermark.lovepik.com/photo/40194/8316.jpg_wh1200.jpg');
+  background-size: cover;
+  align-items: center;
+}
+.o {
+    background-color: rgb(232, 151, 238);
+    font-size: 50px;
+    margin-top: 1%;
+}
+.image{
+  width: 50%;
+}
+
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(136, 30, 166, 0.31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40%;
+  
+}
+
+.overlay h3{
+  color:black;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-weight: 700;
+  
+}
+.overlay p{
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-52 {
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body id="example1">
+<marquee class="o">Welcome to E-COMMERCE website Shop Online .........!</marquee>
+
+<center>
+   
+<div class="container">
+<div class="image">
+    <div class="overlay">
+      <h3>Get Started...!<br>With new Products</h3>
+      <p>Shop Now</p>
+      <a href="{{url_for('home')}}"><button class="button-52">Click To Explore...</button></a>
+    </div>
+  </div>
+</div>
+</center>
+</body>
+</html>

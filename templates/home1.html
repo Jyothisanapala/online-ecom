@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ecommerce Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <script src="https://kit.fontawesome.com/bbb01d58cc.js" crossorigin="anonymous"></script>
+
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body class="def">
+  
+<nav class="navbar" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" id="go"><img src="https://img.icons8.com/cotton/256/online-order.png" class="stylinglogo"/></a>
+      
+    </div>
+    <ul class="nav navbar-nav" id="go">
+      
+      <li  class=nav-link id="go" ><a href="{{url_for('home')}}" id="go"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li  class=nav-link id="go" ><a href="{{url_for('contactus')}}" id="go"><i class="fa-sharp fa-solid fa-square-phone"></i>contactus</a></li>
+      
+      <li id="go"><a href="{{url_for('viewcart')}}" id="go"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a></li>
+      <li class="dropdown" id="go"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="go">Category<span class="caret"></span></a>
+        <ul class="dropdown-menu" id="go">
+          <li id="go"><a href="{{url_for('dashboard',category='electonics')}}" id="go">Electronics</a></li>
+          <li id="go"><a href="{{url_for('dashboard',category='grocery')}}"id="go">Grocery</a></li>
+          <li id="go"><a href="{{url_for('dashboard',category='home')}}" id="go">Home</a></li>
+          <li id="go"><a href="{{url_for('dashboard',category='electonics')}}" id="go">Fashion</a></li>
+          <li id="go"><a href="{{url_for('dashboardpage')}} id="go">All</a></li>
+          
+        </ul>
+      </li>
+      {% if not session_get('user') %}
+      <li id="go"><a href="{{url_for('usignup')}}" id="go"><i class="fa-solid fa-user-plus"></i>Signup</a></li>
+      <li id="go"><a href="{{url_for('login')}}" id="go"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
+      {% endif %}
+
+      
+      {% if session_get('user') %}
+      <li id="go"><a href="#" id="go"><i class="fa-solid fa-money-bill-trend-up"></i>Orders</a></li>
+      <li id="go"><a href="#" id="go"><i class="fa-solid fa-arrow-left"></i>Logout</a></li>
+      {% endif %}
+
+      <li class="qq"><i class="fa-solid fa-user"></i></li>
+       <li class="abc"> <form method="POST" action="{{url_for('search')}}">
+        <input type="search"  name="search" placeholder="Search...">
+        <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+      </form></li> 
+     
+    </ul>
+    
+  </div>
+</nav> 
+</div> 
+    <div class="bgimg d-flex flex-column justify-content-end">
+        <div class="text-center mb-4">
+        <h1 class="head1">Shop with your Choice</h1>
+        <p class="paraline">Better & Faster</p>
+        </div>
+      </div>
+      <br>
+      <div class="bgcolor pt-5 pb-5" ><br>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12 col-md-3" >
+                    <div class="carding p=3">
+                        <img src="https://media.istockphoto.com/id/1370468785/photo/a-nude-eyeshadow-palette-and-makeup-artists-tools-on-a-marble-vanity-brushes-for-powder-blush.jpg?b=1&s=170667a&w=0&k=20&c=VlPBsgdYqmi6og8Ew9NegTDrZ5qc6zxKW0l1kDru5hc=" class="cardimage"/>
+                        <h1 class="chead">Fashion</h1>
+                        <a href="#" id="go">View more<i class="fa-solid fa-arrow-right"></i></a>
+                        <p class="cpara">Shop latest Fashion</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="carding p=3">
+                        <img src="https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1672213252.jpg" class="cardimage"/>
+                        <h1 class="chead">Home Applainces</h1>
+                        <a href="#"id="go">View more<i class="fa-solid fa-arrow-right"></i></a>
+                        <p class="cpara">Shop for your home</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="carding p=3">
+                      <img src="https://hips.hearstapps.com/hmg-prod/images/hungryroot-1658507018.png" class="cardimage"/>
+                      <h1 class="chead">Grocery</h1>
+                      <a href="#"id="go">View more<i class="fa-solid fa-arrow-right"></i></a>
+                      <p class="cpara">Shop Grocery</p>
+                  </div>
+              </div>
+                <div class="col-12 col-md-3">
+                    <div class="carding p=3">
+                        <img src="https://media.istockphoto.com/id/642182562/photo/modern-computer-devices.jpg?s=1024x1024&w=is&k=20&c=wwgylH8VDfn-uF2ytLmSGUz4Z6oxC4aEIM9RjwapcSg=" class="cardimage"/>
+                        <h1 class="chead">Electronics</h1>
+                        <a href="#"id="go">View more<i class="fa-solid fa-arrow-right"></i></a>
+                        <p class="cpara">Shop all latest Portable Devices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div><br>
+      
+
+
+
+<br>
+        
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>      
+           
+</body>
+</html>

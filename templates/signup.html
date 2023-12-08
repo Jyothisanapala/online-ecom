@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/signup.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form method="POST">
+  <div class="card">
+    <div class="form">
+      <h3>Sign Up</h3>
+      
+      <div class="input-field">
+        <i class="fa fa-envelope"></i>
+        <input type="text" name="name" placeholder="Enter your Name">
+    </div>
+    <div class="input-field">
+        <i class="fa fa-lock"></i>
+        <input type="text" name="mobile" placeholder="Enter Mobile Number ">
+    </div>
+    <div class="input-field">
+        <i class="fa fa-envelope"></i>
+        <input type="text" name="email" placeholder="Enter your email">
+    </div>
+    <div class="input-field">
+        <i class="fa fa-envelope"></i>
+        <input type="text" name="address" placeholder="Enter your Address">
+    </div>
+    <!--<div class="input-field">
+        <i class="fa fa-envelop"></i>
+        <input type="text" name="gender" placeholder="Select your gender"/>
+        <div id="one">
+        <input type="radio" name="gender" placeholder="M"/>
+        <input type="radio" name="gender" placeholder="F"/>
+        <input type="radio" name="gender" placeholder="Others"/>
+        </div>
+    </div>-->
+    <label>Gender</label>
+    <select name="gender"><br>
+      <option value="" disabled selected a  gender></option>
+      <select value="F">Female</select>
+      <select value="M">Male</select>
+      <select value="NA">Others</select>
+    </select>
+    <div class="input-field">
+        <i class="fa fa-envelope"></i>
+        <input type="password" name="password" placeholder="Password">
+    </div><br>
+    
+
+    <button>Sign up</button>
+    <a href="#" target="_blank">Already Have an Account?</a> 
+    </div>
+  </div>
+</form>
+</body>
+</html>
