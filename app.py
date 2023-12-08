@@ -443,4 +443,4 @@ def success(itemid,name,q,total):
     mydb.commit()
     cursor.close()
     return 'order placed'
-app.run(debug=True,use_reloader=True)
+app.run()
